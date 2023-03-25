@@ -11,7 +11,8 @@ class veiData(Dataset):
     def __len__(self):
         return len(self.dataset)
     
-    def __getitem__(self, index) -> T_co:
-        return super().__getitem__(index)
+    def __getitem__(self, index):
+        return self.dataset[index], self.label[index]
     
-    
+
+print("nu kör vi!")
